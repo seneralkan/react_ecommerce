@@ -3,9 +3,14 @@ import {
     Link
   } from "react-router-dom";
 import styles from './styles.module.css'
-import { Button, ButtonGroup } from "@chakra-ui/react"
+import { Button} from "@chakra-ui/react"
+//import useAuth from '../../context/AuthContext'
 
 function Navbar() {
+
+    //const {loggedIn} =useAuth();
+    //console.log(loggedIn)
+
     return (
       <nav className={styles.nav}>
           <div className={styles.left}>

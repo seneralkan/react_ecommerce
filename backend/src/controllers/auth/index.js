@@ -31,11 +31,10 @@ const Register = async (req, res, next) => {
 		const user = new User(input);
 		const data = await user.save();
 		const userData = data.toObject();
-		// passorword u direk vermesin diye siliniyor
-		// version durumu da ayni sekilde
+
 		delete userData.password;
 		delete userData.__v;
-		// jsonwebtoken kullanarak accesstiken olusturuyoruz
+
 		const accessToken = await signAccessToken({
 			user_id: user._id,
 			role: user.role,

@@ -7,6 +7,7 @@ import {
 import Navbar from './components/Navbar';
 import Login from './pages/Auth/Login'
 import Signup from './pages/Auth/Signup'
+import Products from './pages/Products';
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
       <Navbar/>
       <div id="content">
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Products} />
           <Route path="/sign-in" component={Login} />
           <Route path="/sign-up" component={Signup} />
+          
         </Switch>
       </div>
     </div>
@@ -26,8 +28,5 @@ function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
 
 export default App;

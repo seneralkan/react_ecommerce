@@ -9,10 +9,8 @@ const signAccessToken = (data) => {
 			...data,
 		};
 
-		// developer ortamindan kaynakli password 10 gun sureli kaliyor
 		const options = {
 			expiresIn: "10d",
-			// yapilan sitenin domaini yazilabilir
 			issuer: "ecommerce.app",
 		};
 

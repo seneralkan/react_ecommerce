@@ -22,8 +22,6 @@ const UserSchema = new Schema({
 	},
 });
 
-// Kullanci parolasinin veritabanina  kayit edilmeden once veritababnna ekleniyor
-// mongose kullaniliyor bu islemler icin
 UserSchema.pre("save", async function (next) {
 	try {
 		if (this.isNew) {
